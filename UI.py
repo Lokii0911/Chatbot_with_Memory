@@ -2,8 +2,9 @@ import streamlit as st
 import uuid
 import requests
 from requests import session
-
-BACKEND_URL = "http://localhost:8000"
+import os
+loadenv()
+BACKEND_URL = os.environ.get("URL")
 st.set_page_config(page_title="Nova AI", page_icon="✨")
 st.title("✨ Nova AI Assistant")
 
